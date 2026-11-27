@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Norde · Tonic Rinse-in Shampoo</title>
+  <meta name="description" content="A cooling rinse-in shampoo for oily scalps and long days outside. Salt, sun and sweat, rinsed off in one go.">
+  <meta name="theme-color" content="#0f3550">
+  <meta property="og:title" content="Norde · Tonic Rinse-in Shampoo">
+  <meta property="og:description" content="Salt, sun and sweat, rinsed off in one go.">
+  <meta property="og:image" content="/shots/hero.webp">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+</head>
+<body>
+  <a class="skip" href="#shop">Skip to product</a>
+
+  <div class="announce"><span>Free delivery over $35</span><span class="dot" aria-hidden="true"></span><span>Prototype store · placeholder brand</span></div>
+
+  <header class="top" id="top">
+    <div class="wrap">
+      <a class="logo" href="#" aria-label="Norde home">Norde</a>
+      <nav class="nav" aria-label="Main">
+        <a href="#shop">Shop</a><a href="#texture">Texture</a><a href="#formula">Formula</a><a href="#routine">Routine</a><a href="#faq">FAQ</a>
+      </nav>
+      <button class="bag-btn" id="bagBtn" aria-label="Open bag" aria-controls="drawer" aria-expanded="false">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 8h14l-1 12H6L5 8Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
+        <span class="bag-label">Bag</span> <span class="bag-count" id="bagCount">0</span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- Story: one sticky 3D scene. Hero copy, then the product card, scroll over it. -->
+    <div class="story" id="story">
+      <div class="stage" id="stage">
+        <canvas id="beach" aria-label="3D scene: the Norde Tonic bottle floating above a striped beach towel by the sea, then landing on the towel beside oranges" role="img"></canvas>
+        <img class="poster" id="poster" src="/shots/hero.webp" alt="" aria-hidden="true">
+        <div class="grain" aria-hidden="true"></div>
+        <div class="loader" id="loader"><span>Setting up the beach…</span></div>
+      </div>
+
+      <section class="hero" aria-labelledby="heroTitle">
+        <div class="wrap hero-grid">
+          <h1 id="heroTitle" class="sr">Norde Tonic Rinse-in Shampoo</h1>
+          <p class="hero-l">Salt, sun <br>and sweat, <br>rinsed off.</p>
+          <p class="hero-r">Cool menthol.<br>Conditions as<br>you rinse.</p>
+          <div class="hero-cta">
+            <a class="btn" href="#shop">Shop the shampoo</a>
+            <span class="scroll-hint" aria-hidden="true">Scroll<i></i></span>
+          </div>
+        </div>
+      </section>
+
+      <section class="product" id="shop" aria-labelledby="pName">
+        <div class="wrap">
+          <div class="card">
+            <span class="eyebrow">Summer shampoo · Cool menthol</span>
+            <h2 id="pName">Tonic Rinse-in Shampoo</h2>
+            <div class="rating" aria-label="Sample rating"><span class="stars" aria-hidden="true">★★★★★</span><span class="proto-note">Sample rating</span></div>
+            <div class="price-row"><span class="price" id="price">$18.00</span><span class="proto-note">Prototype price</span></div>
+            <p>Lifts oil, salt water and buildup from the scalp, leaves a cool menthol tingle like a first dip in the sea, and conditions the lengths as you rinse. One bottle in the beach bag.</p>
+            <fieldset class="sizes">
+              <legend>Size</legend>
+              <label class="size"><input type="radio" name="size" value="bottle" checked><span><b>550 ml pump bottle</b><small>$18.00</small></span></label>
+              <label class="size"><input type="radio" name="size" value="refill"><span><b>800 ml refill pouch</b><small>$15.00</small></span></label>
+            </fieldset>
+            <div class="buy">
+              <div class="qty" role="group" aria-label="Quantity">
+                <button type="button" id="qMinus" aria-label="Decrease quantity">−</button>
+                <output id="qVal" aria-live="polite">1</output>
+                <button type="button" id="qPlus" aria-label="Increase quantity">+</button>
+              </div>
+              <button class="btn btn-wide" id="addBtn">Add to bag</button>
+            </div>
+            <ul class="perks">
+              <li><b>Ships in 1–2 days.</b> Free over $35.</li>
+              <li><b>30-day returns</b> on unopened bottles.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div class="marquee" aria-hidden="true"><div class="marquee-track"><span>Cool menthol</span><span>Rinse-in conditioning</span><span>Salt-water reset</span><span>550 ml beach-bag bottle</span><span>Cool menthol</span><span>Rinse-in conditioning</span><span>Salt-water reset</span><span>550 ml beach-bag bottle</span></div></div>
+
+    <section class="block texture" id="texture" aria-labelledby="tH">
+      <div class="wrap texture-grid">
+        <div class="foam-wrap">
+          <canvas id="foam" aria-label="3D animation of shampoo foam and floating bubbles" role="img"></canvas>
+          <span class="foam-tag">Drag to turn the lather</span>
+        </div>
+        <div class="texture-copy">
+          <span class="eyebrow">Texture and lather</span>
+          <h2 id="tH">Feels like the first dip</h2>
+          <p class="lede">A clear, fluid gel that opens into a light foam within a few seconds. The menthol hits first and cold, then a bright citrus-peel note that drifts off once you rinse.</p>
+          <dl class="notes">
+            <div><dt>Feel</dt><dd>Fluid gel, not thick or creamy</dd></div>
+            <div><dt>Lather</dt><dd>Light, airy, rinses fast</dd></div>
+            <div><dt>Scent</dt><dd>Menthol up front, soft citrus dry-down</dd></div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <section class="editorial" aria-label="Beach photo">
+      <img src="/shots/wide.webp" alt="The Norde bottle standing on a striped towel on the sand, with the sea behind it" loading="lazy">
+      <p class="editorial-word" aria-hidden="true">Back outside</p>
+    </section>
+
+    <section class="block formula" id="formula" aria-labelledby="fH">
+      <div class="wrap">
+        <div class="block-head">
+          <span class="eyebrow">Formula and hair fit</span>
+          <h2 id="fH">Will this suit my hair?</h2>
+          <p>Most likely, if your scalp gets oily by the end of the day and you'd rather not use a separate conditioner.</p>
+        </div>
+        <div class="fit">
+          <div class="fit-col yes"><h3>A good fit if you have</h3><ul><li>A scalp that feels oily or itchy after a hot day</li><li>Normal, fine or short hair</li><li>Hair that sees salt water, pools or a lot of sweat</li></ul></div>
+          <div class="fit-col no"><h3>Maybe not, if you have</h3><ul><li>Very dry, curly or bleached hair that needs a rich conditioner</li><li>A scalp that dislikes a cooling tingle</li><li>Colour-treated hair you wash daily</li></ul></div>
+        </div>
+        <div class="actives">
+          <article><span class="num">01</span><h3>Menthol</h3><p class="sub">The cool finish</p><p>Menthol triggers the skin's cold receptors, so your scalp feels fresh and cool for a few minutes after rinsing. It's why a wash feels like a reset after the beach, a run or a sticky afternoon.</p></article>
+          <article><span class="num">02</span><h3>Gentle cleansers</h3><p class="sub">Lifts oil and buildup</p><p>A blend of mild surfactants loosens sebum, salt and styling residue at the roots so it rinses away with water, without leaving the scalp tight.</p></article>
+          <article><span class="num">03</span><h3>Rinse-in conditioner</h3><p class="sub">Smooths as you rinse</p><p>Conditioning agents settle on the hair shaft as the foam rinses out, cutting down tangles and static so most people can skip a separate conditioner.</p></article>
+        </div>
+        <details class="inci"><summary>Full ingredient list</summary><p>Placeholder. Paste the full INCI list exactly as printed on the packaging here, in descending order of concentration, including allergens declared in fragrance.</p></details>
+      </div>
+    </section>
+
+    <section class="block routine" id="routine" aria-labelledby="rH">
+      <div class="wrap">
+        <div class="block-head">
+          <span class="eyebrow">Wash routine</span>
+          <h2 id="rH">Three steps, then back outside</h2>
+        </div>
+        <ol class="steps">
+          <li><figure><img src="/shots/step1.webp" alt="Close-up of the bottle's pump head" loading="lazy"></figure><span class="num">Step 1</span><h3>Pump one or two</h3><p>One pump for short hair, two for shoulder length. Work it between wet palms first.</p></li>
+          <li><figure><img src="/shots/step2.webp" alt="Shampoo foam and bubbles" loading="lazy"></figure><span class="num">Step 2</span><h3>Massage the scalp</h3><p>Focus on the roots with your fingertips for 30 seconds. Let the foam run down the lengths on its own.</p></li>
+          <li><figure><img src="/shots/step3.webp" alt="The bottle on a towel by the sea at golden hour" loading="lazy"></figure><span class="num">Step 3</span><h3>Rinse well</h3><p>Rinse with lukewarm water until hair squeaks lightly. No conditioner needed after.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="block reviews" id="reviews" aria-labelledby="rvH">
+      <div class="wrap">
+        <div class="block-head">
+          <span class="eyebrow">Reviews</span>
+          <h2 id="rvH">What people say</h2>
+          <p class="proto-note">Layout samples. Replace with verified customer reviews before launch.</p>
+        </div>
+        <div class="review-row">
+          <figure class="review"><span class="stars" aria-hidden="true">★★★★★</span><blockquote>Sample review. Keep featured reviews short and about one thing, like how the scalp feels by evening.</blockquote><figcaption>Sample reviewer · Sample</figcaption></figure>
+          <figure class="review"><span class="stars" aria-hidden="true">★★★★★</span><blockquote>Sample review. A line about the cool tingle after a surf or a run.</blockquote><figcaption>Sample reviewer · Sample</figcaption></figure>
+          <figure class="review"><span class="stars" aria-hidden="true">★★★★☆</span><blockquote>Sample review. An honest note, like wishing the bottle came in a travel size.</blockquote><figcaption>Sample reviewer · Sample</figcaption></figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="block faq" id="faq" aria-labelledby="faqH">
+      <div class="wrap faq-grid">
+        <div class="block-head"><span class="eyebrow">FAQ</span><h2 id="faqH">Good to know</h2></div>
+        <div class="faq-list">
+          <details><summary>Do I still need conditioner?</summary><p>Most people with normal to fine hair don't. If your ends feel dry, add a light conditioner to the lengths only.</p></details>
+          <details><summary>Is it safe for coloured hair?</summary><p>It's gentle enough for occasional use on coloured hair. If you wash daily, alternate with a colour-care shampoo.</p></details>
+          <details><summary>How strong is the menthol?</summary><p>You'll feel a clear cool tingle for a few minutes after rinsing. It fades without leaving the scalp tight.</p></details>
+          <details><summary>Shipping and returns</summary><p>Orders ship in 1 to 2 business days, free over $35. Unopened bottles can be returned within 30 days.</p></details>
+          <details><summary>What is the refill pouch?</summary><p>800 ml of the same shampoo in a soft pouch. Pour it into your empty pump bottle and recycle the pouch where accepted.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <section class="news">
+      <div class="wrap news-grid">
+        <h2>Summer notes, once a month</h2>
+        <form id="newsForm" class="news-form" novalidate>
+          <label class="sr" for="email">Email address</label>
+          <input id="email" type="email" placeholder="you@example.com" autocomplete="email" required>
+          <button class="btn btn-light" type="submit">Sign up</button>
+          <p class="news-msg" id="newsMsg" role="status"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site">
+    <div class="wrap foot-grid">
+      <div><span class="logo">Norde</span><p>Prototype storefront. Brand, prices and reviews are placeholders.</p></div>
+      <div><h3>Shop</h3><a href="#shop">Tonic Shampoo</a><a href="#shop">Refill pouch</a></div>
+      <div><h3>Help</h3><a href="#faq">Shipping</a><a href="#faq">Returns</a><a href="#faq">FAQ</a></div>
+      <div><h3>Follow</h3><a href="#" aria-disabled="true">Instagram</a><a href="#" aria-disabled="true">TikTok</a></div>
+    </div>
+    <div class="wrap foot-base"><span>© 2026 Norde (placeholder)</span><span>Made by the sea</span></div>
+  </footer>
+
+  <!-- sticky mobile buy bar -->
+  <div class="buybar" id="buybar" aria-hidden="true">
+    <span><b>Tonic Shampoo</b> <span id="barPrice">$18.00</span></span>
+    <button class="btn" id="barAdd" tabindex="-1">Add to bag</button>
+  </div>
+
+  <!-- cart drawer -->
+  <div class="scrim" id="scrim" hidden></div>
+  <aside class="drawer" id="drawer" aria-label="Your bag" aria-hidden="true" tabindex="-1">
+    <div class="drawer-head"><h2>Your bag</h2><button class="icon-btn" id="closeBag" aria-label="Close bag">✕</button></div>
+    <div class="ship-meter"><p id="shipMsg">Add $35.00 for free delivery</p><div class="meter"><i id="shipBar"></i></div></div>
+    <ul class="lines" id="lines"></ul>
+    <div class="empty" id="empty"><p>Your bag is empty.</p><a class="btn" href="#shop" id="emptyShop">Shop the shampoo</a></div>
+    <div class="drawer-foot" id="foot">
+      <div class="row"><span>Subtotal</span><b id="subtotal">$0.00</b></div>
+      <div class="row muted"><span>Delivery</span><span id="delivery">Calculated at checkout</span></div>
+      <button class="btn btn-wide" id="checkout">Checkout</button>
+      <p class="proto-note center">Checkout isn't connected yet in this prototype.</p>
+    </div>
+  </aside>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>

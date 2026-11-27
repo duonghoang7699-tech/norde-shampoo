@@ -1,0 +1,21 @@
+{
+  "name": "norde-shampoo",
+  "version": "1.0.0",
+  "description": "Norde storefront prototype with a 3D beach scene",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "@fontsource/archivo-black": "^5.3.0",
+    "@fontsource/dm-sans": "^5.3.0",
+    "three": "^0.170.0"
+  },
+  "devDependencies": {
+    "vite": "^5.4.11"
+  },
+  "private": true,
+  "type": "module"
+}
