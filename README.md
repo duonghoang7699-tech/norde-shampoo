@@ -1,9 +1,9 @@
 # Norde storefront (prototype)
 
-A one-page shampoo store with a real-time 3D beach scene: the bottle floats over the sea,
-then spins down onto a striped towel beside oranges as you scroll. Built with Vite + Three.js.
+A one-page store for two cool-menthol products (Tonic Rinse in Shampoo and Cool Body Soap),
+built around real product photography with a beach theme. Vite, no framework.
 
-Brand name, prices and reviews are placeholders until the real product details are confirmed.
+Prices and reviews are placeholders.
 
 ## Run locally
 
@@ -13,23 +13,20 @@ npm run dev      # http://localhost:5173
 npm run build    # outputs dist/
 ```
 
-## Deploy on Vercel
+## Deploy
 
-Import this repo at https://vercel.com/new. Vercel detects Vite automatically
-(build `npm run build`, output `dist`). Every push to `main` redeploys.
+Connected to Vercel: every push to `main` redeploys production, and other branches get preview links.
 
 ## Where things live
 
-- `src/scene.js`: the beach scene (sky, sea, sand, towel, oranges, camera path on scroll)
-- `src/bottle.js`, `src/textures.js`: the bottle model and its printed label, plus procedural textures
-- `src/foam.js`: the lather section
-- `src/cart.js`: bag drawer, sizes, quantities, free-delivery meter (saved in the browser)
-- `public/shots/`: still images rendered from the 3D scene (poster, editorial and routine photos)
+- `index.html`: all page sections
+- `src/style.css`: palette (taken from the photos), layout, motion
+- `src/main.js`: scroll reveals, parallax, photo tilt, newsletter form
+- `src/cart.js`: bag drawer, sizes, the pair bundle, free-delivery meter (saved in the browser)
+- `public/img/`: product photos and crops
 
 ## Not connected yet
 
 - Checkout/payments (the Checkout button shows a notice). Shopify or Stripe can be wired in next.
 - Newsletter sign-up (front end only).
-- Real ingredient list and verified reviews.
-
-Sea surface normal map (`public/tex/waternormals.jpg`) is from the three.js examples (MIT).
+- Real ingredient lists and verified reviews.

@@ -3,24 +3,24 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>Norde · Tonic Rinse-in Shampoo</title>
-  <meta name="description" content="A cooling rinse-in shampoo for oily scalps and long days outside. Salt, sun and sweat, rinsed off in one go.">
-  <meta name="theme-color" content="#0f3550">
-  <meta property="og:title" content="Norde · Tonic Rinse-in Shampoo">
+  <title>Norde · Cool menthol care for the coast</title>
+  <meta name="description" content="Tonic Rinse in Shampoo and Cool Body Soap with cool menthol. Salt, sun and sweat, rinsed off in one go.">
+  <meta name="theme-color" content="#2f4a5c">
+  <meta property="og:title" content="Norde · Cool menthol care for the coast">
   <meta property="og:description" content="Salt, sun and sweat, rinsed off in one go.">
-  <meta property="og:image" content="/shots/hero.webp">
+  <meta property="og:image" content="/img/tonic.webp">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="preload" as="image" href="/img/tonic.webp" fetchpriority="high">
 </head>
 <body>
-  <a class="skip" href="#shop">Skip to product</a>
+  <a class="skip" href="#shop">Skip to shop</a>
+  <div class="announce"><span>Free delivery over $35</span><span class="dot" aria-hidden="true"></span><span>Prototype store · prices are placeholders</span></div>
 
-  <div class="announce"><span>Free delivery over $35</span><span class="dot" aria-hidden="true"></span><span>Prototype store · placeholder brand</span></div>
-
-  <header class="top" id="top">
+  <header class="top">
     <div class="wrap">
       <a class="logo" href="#" aria-label="Norde home">Norde</a>
       <nav class="nav" aria-label="Main">
-        <a href="#shop">Shop</a><a href="#texture">Texture</a><a href="#formula">Formula</a><a href="#routine">Routine</a><a href="#faq">FAQ</a>
+        <a href="#shop">Shop</a><a href="#tonic">Shampoo</a><a href="#soap">Body soap</a><a href="#routine">Routine</a><a href="#faq">FAQ</a>
       </nav>
       <button class="bag-btn" id="bagBtn" aria-label="Open bag" aria-controls="drawer" aria-expanded="false">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 8h14l-1 12H6L5 8Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
@@ -30,152 +30,187 @@
   </header>
 
   <main>
-    <!-- Story: one sticky 3D scene. Hero copy, then the product card, scroll over it. -->
-    <div class="story" id="story">
-      <div class="stage" id="stage">
-        <canvas id="beach" aria-label="3D scene: the Norde Tonic bottle floating above a striped beach towel by the sea, then landing on the towel beside oranges" role="img"></canvas>
-        <img class="poster" id="poster" src="/shots/hero.webp" alt="" aria-hidden="true">
-        <div class="grain" aria-hidden="true"></div>
-        <div class="loader" id="loader"><span>Setting up the beach…</span></div>
+    <!-- HERO -->
+    <section class="hero" aria-labelledby="heroTitle">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <span class="eyebrow reveal">Cool menthol care · Summer edit</span>
+          <h1 id="heroTitle" class="reveal">Cool off<br>the coast.</h1>
+          <p class="lede reveal">Salt, sun and sweat, rinsed off in one go. A cooling shampoo for the scalp and a cooling soap for everything else.</p>
+          <div class="cta-row reveal">
+            <a class="btn" href="#shop">Shop the pair</a>
+            <a class="btn btn-ghost" href="#tonic">See the shampoo</a>
+          </div>
+          <ul class="hero-facts reveal">
+            <li><b>550 ml</b><span>pump bottles</span></li>
+            <li><b>Menthol</b><span>cool finish</span></li>
+            <li><b>2-in-1</b><span>rinse in shampoo</span></li>
+          </ul>
+        </div>
+        <div class="hero-media">
+          <figure class="hm-main" data-speed="-0.06">
+            <img src="/img/tonic.webp" width="1087" height="1447" alt="Tonic Rinse in Shampoo standing on a striped beach towel with smooth stones and polaroids, the sea behind at dusk" fetchpriority="high">
+          </figure>
+          <figure class="hm-float" data-speed="0.08">
+            <img src="/img/soap-sm.webp" width="540" height="724" alt="Cool Body Soap in a teal bottle on white linen and stone by the sea" loading="eager">
+            <figcaption>Cool Body Soap</figcaption>
+          </figure>
+          <span class="hm-badge" aria-hidden="true">New<br>summer</span>
+        </div>
       </div>
+    </section>
 
-      <section class="hero" aria-labelledby="heroTitle">
-        <div class="wrap hero-grid">
-          <h1 id="heroTitle" class="sr">Norde Tonic Rinse-in Shampoo</h1>
-          <p class="hero-l">Salt, sun <br>and sweat, <br>rinsed off.</p>
-          <p class="hero-r">Cool menthol.<br>Conditions as<br>you rinse.</p>
-          <div class="hero-cta">
-            <a class="btn" href="#shop">Shop the shampoo</a>
-            <span class="scroll-hint" aria-hidden="true">Scroll<i></i></span>
-          </div>
+    <div class="marquee" aria-hidden="true"><div class="marquee-track"><span>Cool menthol</span><span>Rinse in conditioning</span><span>Salt-water reset</span><span>Beach-bag sized</span><span>Cool menthol</span><span>Rinse in conditioning</span><span>Salt-water reset</span><span>Beach-bag sized</span></div></div>
+
+    <!-- SHOP -->
+    <section class="block shop" id="shop" aria-labelledby="shopH">
+      <div class="wrap">
+        <div class="block-head reveal">
+          <span class="eyebrow">Shop</span>
+          <h2 id="shopH">Two bottles for the beach bag</h2>
         </div>
-      </section>
-
-      <section class="product" id="shop" aria-labelledby="pName">
-        <div class="wrap">
-          <div class="card">
-            <span class="eyebrow">Summer shampoo · Cool menthol</span>
-            <h2 id="pName">Tonic Rinse-in Shampoo</h2>
-            <div class="rating" aria-label="Sample rating"><span class="stars" aria-hidden="true">★★★★★</span><span class="proto-note">Sample rating</span></div>
-            <div class="price-row"><span class="price" id="price">$18.00</span><span class="proto-note">Prototype price</span></div>
-            <p>Lifts oil, salt water and buildup from the scalp, leaves a cool menthol tingle like a first dip in the sea, and conditions the lengths as you rinse. One bottle in the beach bag.</p>
-            <fieldset class="sizes">
-              <legend>Size</legend>
-              <label class="size"><input type="radio" name="size" value="bottle" checked><span><b>550 ml pump bottle</b><small>$18.00</small></span></label>
-              <label class="size"><input type="radio" name="size" value="refill"><span><b>800 ml refill pouch</b><small>$15.00</small></span></label>
-            </fieldset>
-            <div class="buy">
-              <div class="qty" role="group" aria-label="Quantity">
-                <button type="button" id="qMinus" aria-label="Decrease quantity">−</button>
-                <output id="qVal" aria-live="polite">1</output>
-                <button type="button" id="qPlus" aria-label="Increase quantity">+</button>
-              </div>
-              <button class="btn btn-wide" id="addBtn">Add to bag</button>
+        <div class="products">
+          <article class="product reveal" data-product="tonic" aria-labelledby="pTonic">
+            <div class="p-media tilt"><img src="/img/tonic.webp" width="1087" height="1447" alt="Tonic Rinse in Shampoo, 550 ml smoky grey pump bottle, on a beach towel" loading="lazy"><span class="p-tag">Hair + scalp</span></div>
+            <div class="p-body">
+              <div class="p-title"><h3 id="pTonic">Tonic Rinse in Shampoo</h3><span class="price" data-price>$18.00</span></div>
+              <p>Deep cleanses an oily scalp with a cool menthol tingle and conditions as you rinse. No extra bottle.</p>
+              <fieldset class="sizes">
+                <legend class="sr">Size</legend>
+                <label class="size"><input type="radio" name="size-tonic" value="tonic-550" checked><span>550 ml bottle</span></label>
+                <label class="size"><input type="radio" name="size-tonic" value="tonic-refill"><span>800 ml refill</span></label>
+              </fieldset>
+              <button class="btn btn-wide add">Add to bag</button>
             </div>
-            <ul class="perks">
-              <li><b>Ships in 1–2 days.</b> Free over $35.</li>
-              <li><b>30-day returns</b> on unopened bottles.</li>
-            </ul>
-          </div>
+          </article>
+          <article class="product reveal" data-product="soap" aria-labelledby="pSoap">
+            <div class="p-media tilt"><img src="/img/soap.webp" width="1083" height="1452" alt="Cool Body Soap, 550 ml teal pump bottle, on white linen by the sea" loading="lazy"><span class="p-tag teal">Body</span></div>
+            <div class="p-body">
+              <div class="p-title"><h3 id="pSoap">Cool Body Soap</h3><span class="price" data-price>$16.00</span></div>
+              <p>Removes excess oil, dirt and sweat and leaves skin fresh, smooth and cool. Made for after the beach, the gym or a sticky commute.</p>
+              <fieldset class="sizes">
+                <legend class="sr">Size</legend>
+                <label class="size"><input type="radio" name="size-soap" value="soap-550" checked><span>550 ml bottle</span></label>
+                <label class="size"><input type="radio" name="size-soap" value="soap-refill"><span>800 ml refill</span></label>
+              </fieldset>
+              <button class="btn btn-wide btn-teal add">Add to bag</button>
+            </div>
+          </article>
         </div>
-      </section>
-    </div>
-
-    <div class="marquee" aria-hidden="true"><div class="marquee-track"><span>Cool menthol</span><span>Rinse-in conditioning</span><span>Salt-water reset</span><span>550 ml beach-bag bottle</span><span>Cool menthol</span><span>Rinse-in conditioning</span><span>Salt-water reset</span><span>550 ml beach-bag bottle</span></div></div>
-
-    <section class="block texture" id="texture" aria-labelledby="tH">
-      <div class="wrap texture-grid">
-        <div class="foam-wrap">
-          <canvas id="foam" aria-label="3D animation of shampoo foam and floating bubbles" role="img"></canvas>
-          <span class="foam-tag">Drag to turn the lather</span>
+        <div class="bundle reveal">
+          <div><b>The coast pair</b><span>Shampoo + body soap, 550 ml each</span></div>
+          <div class="bundle-price"><s>$34.00</s> <b>$30.00</b></div>
+          <button class="btn" id="addPair">Add the pair</button>
         </div>
-        <div class="texture-copy">
-          <span class="eyebrow">Texture and lather</span>
-          <h2 id="tH">Feels like the first dip</h2>
-          <p class="lede">A clear, fluid gel that opens into a light foam within a few seconds. The menthol hits first and cold, then a bright citrus-peel note that drifts off once you rinse.</p>
+      </div>
+    </section>
+
+    <!-- TONIC STORY -->
+    <section class="story story-tonic" id="tonic" aria-labelledby="tonicH">
+      <div class="story-media" data-speed="-0.04"><img src="/img/tonic-towel.webp" width="760" height="447" alt="Striped beach towel with rope fringe and two polaroids of the coast on the sand" loading="lazy"></div>
+      <div class="wrap story-grid">
+        <div class="story-copy reveal">
+          <span class="eyebrow">Tonic Rinse in Shampoo</span>
+          <h2 id="tonicH">Feels like the first dip</h2>
+          <p>A clear, fluid gel that opens into a light foam in seconds. Menthol hits first and cold, then fades once you rinse, leaving the scalp clean and the lengths soft.</p>
           <dl class="notes">
-            <div><dt>Feel</dt><dd>Fluid gel, not thick or creamy</dd></div>
-            <div><dt>Lather</dt><dd>Light, airy, rinses fast</dd></div>
-            <div><dt>Scent</dt><dd>Menthol up front, soft citrus dry-down</dd></div>
+            <div><dt>For</dt><dd>Oily scalp, normal to fine hair</dd></div>
+            <div><dt>Feel</dt><dd>Fluid gel, light airy lather</dd></div>
+            <div><dt>Finish</dt><dd>Cool, clean, no extra conditioner</dd></div>
           </dl>
         </div>
+        <figure class="story-detail reveal tilt"><img src="/img/tonic-label.webp" width="320" height="400" alt="Close-up of the Tonic Rinse in Shampoo label: infused with cool menthol" loading="lazy"></figure>
       </div>
     </section>
 
-    <section class="editorial" aria-label="Beach photo">
-      <img src="/shots/wide.webp" alt="The Norde bottle standing on a striped towel on the sand, with the sea behind it" loading="lazy">
-      <p class="editorial-word" aria-hidden="true">Back outside</p>
+    <!-- SOAP STORY -->
+    <section class="story-soap" id="soap" aria-labelledby="soapH">
+      <div class="soap-photo"><img src="/img/soap.webp" width="1083" height="1452" alt="Cool Body Soap on white linen beside sea glass and an open book, sea and a wind turbine behind" loading="lazy" data-speed="-0.05"></div>
+      <div class="soap-copy">
+        <div class="soap-inner reveal">
+          <span class="eyebrow light">Cool Body Soap</span>
+          <h2 id="soapH">Clean like a sea breeze</h2>
+          <p>Cool menthol lifts excess oil, dirt and sweat from head to toe, then leaves a fresh, smooth feel that lasts into the evening.</p>
+          <div class="soap-chips"><span>Cool menthol</span><span>Fresh rinse</span><span>550 ml</span></div>
+          <a class="btn btn-light" href="#shop">Shop body soap</a>
+        </div>
+        <img class="soap-glass" src="/img/soap-glass.webp" width="440" height="340" alt="" aria-hidden="true" loading="lazy">
+      </div>
     </section>
 
+    <!-- FORMULA -->
     <section class="block formula" id="formula" aria-labelledby="fH">
       <div class="wrap">
-        <div class="block-head">
-          <span class="eyebrow">Formula and hair fit</span>
-          <h2 id="fH">Will this suit my hair?</h2>
-          <p>Most likely, if your scalp gets oily by the end of the day and you'd rather not use a separate conditioner.</p>
-        </div>
-        <div class="fit">
-          <div class="fit-col yes"><h3>A good fit if you have</h3><ul><li>A scalp that feels oily or itchy after a hot day</li><li>Normal, fine or short hair</li><li>Hair that sees salt water, pools or a lot of sweat</li></ul></div>
-          <div class="fit-col no"><h3>Maybe not, if you have</h3><ul><li>Very dry, curly or bleached hair that needs a rich conditioner</li><li>A scalp that dislikes a cooling tingle</li><li>Colour-treated hair you wash daily</li></ul></div>
+        <div class="block-head reveal">
+          <span class="eyebrow">What's inside</span>
+          <h2 id="fH">Why it feels so cool</h2>
+          <p>Both bottles are built around the same idea: get the salt and oil off fast, and leave a cool, clean feeling behind.</p>
         </div>
         <div class="actives">
-          <article><span class="num">01</span><h3>Menthol</h3><p class="sub">The cool finish</p><p>Menthol triggers the skin's cold receptors, so your scalp feels fresh and cool for a few minutes after rinsing. It's why a wash feels like a reset after the beach, a run or a sticky afternoon.</p></article>
-          <article><span class="num">02</span><h3>Gentle cleansers</h3><p class="sub">Lifts oil and buildup</p><p>A blend of mild surfactants loosens sebum, salt and styling residue at the roots so it rinses away with water, without leaving the scalp tight.</p></article>
-          <article><span class="num">03</span><h3>Rinse-in conditioner</h3><p class="sub">Smooths as you rinse</p><p>Conditioning agents settle on the hair shaft as the foam rinses out, cutting down tangles and static so most people can skip a separate conditioner.</p></article>
+          <article class="reveal"><span class="num">01</span><h3>Cool menthol</h3><p>Menthol triggers the skin's cold receptors, so your scalp and skin feel fresh for a few minutes after rinsing. It's why a wash feels like a reset after the beach.</p></article>
+          <article class="reveal"><span class="num">02</span><h3>Deep cleansing</h3><p>Mild cleansers loosen sebum, salt, sunscreen and sweat so they rinse away with water, without leaving skin tight.</p></article>
+          <article class="reveal"><span class="num">03</span><h3>Rinse in care</h3><p>In the shampoo, conditioning agents settle on the hair as the foam rinses out, cutting tangles so most people can skip a separate conditioner.</p></article>
         </div>
-        <details class="inci"><summary>Full ingredient list</summary><p>Placeholder. Paste the full INCI list exactly as printed on the packaging here, in descending order of concentration, including allergens declared in fragrance.</p></details>
+        <div class="fit reveal">
+          <div class="fit-col yes"><h3>A good fit if you have</h3><ul><li>A scalp that gets oily or itchy after a hot day</li><li>Normal, fine or short hair</li><li>Days of salt water, pools or a lot of sweat</li></ul></div>
+          <div class="fit-col no"><h3>Maybe not, if you have</h3><ul><li>Very dry, curly or bleached hair that needs a rich conditioner</li><li>Skin that dislikes a cooling tingle</li><li>Colour-treated hair you wash daily</li></ul></div>
+        </div>
+        <details class="inci"><summary>Full ingredient lists</summary><p>Placeholder. Paste each INCI list exactly as printed on the packaging, in descending order of concentration, including declared fragrance allergens.</p></details>
       </div>
     </section>
 
+    <!-- ROUTINE -->
     <section class="block routine" id="routine" aria-labelledby="rH">
       <div class="wrap">
-        <div class="block-head">
-          <span class="eyebrow">Wash routine</span>
+        <div class="block-head reveal">
+          <span class="eyebrow">After the beach</span>
           <h2 id="rH">Three steps, then back outside</h2>
         </div>
         <ol class="steps">
-          <li><figure><img src="/shots/step1.webp" alt="Close-up of the bottle's pump head" loading="lazy"></figure><span class="num">Step 1</span><h3>Pump one or two</h3><p>One pump for short hair, two for shoulder length. Work it between wet palms first.</p></li>
-          <li><figure><img src="/shots/step2.webp" alt="Shampoo foam and bubbles" loading="lazy"></figure><span class="num">Step 2</span><h3>Massage the scalp</h3><p>Focus on the roots with your fingertips for 30 seconds. Let the foam run down the lengths on its own.</p></li>
-          <li><figure><img src="/shots/step3.webp" alt="The bottle on a towel by the sea at golden hour" loading="lazy"></figure><span class="num">Step 3</span><h3>Rinse well</h3><p>Rinse with lukewarm water until hair squeaks lightly. No conditioner needed after.</p></li>
+          <li class="reveal"><figure class="tilt"><img src="/img/tonic-pump.webp" width="400" height="500" alt="The shampoo's pump head against the sea" loading="lazy"></figure><span class="num">Step 1</span><h3>Pump one or two</h3><p>One pump of shampoo for short hair, two for shoulder length. Work it between wet palms first.</p></li>
+          <li class="reveal"><figure class="tilt"><img src="/img/soap-glass.webp" width="440" height="340" alt="Two pieces of sea glass on white linen" loading="lazy"></figure><span class="num">Step 2</span><h3>Scalp, then skin</h3><p>Massage the roots for 30 seconds while the body soap does the rest. Let the foam run down on its own.</p></li>
+          <li class="reveal"><figure class="tilt"><img src="/img/tonic-sea.webp" width="470" height="590" alt="Calm sea under a peach dusk sky" loading="lazy"></figure><span class="num">Step 3</span><h3>Rinse cool</h3><p>Rinse with lukewarm water until hair squeaks lightly. Feel the menthol kick in. No conditioner needed.</p></li>
         </ol>
       </div>
     </section>
 
+    <!-- REVIEWS -->
     <section class="block reviews" id="reviews" aria-labelledby="rvH">
       <div class="wrap">
-        <div class="block-head">
+        <div class="block-head reveal">
           <span class="eyebrow">Reviews</span>
           <h2 id="rvH">What people say</h2>
           <p class="proto-note">Layout samples. Replace with verified customer reviews before launch.</p>
         </div>
         <div class="review-row">
-          <figure class="review"><span class="stars" aria-hidden="true">★★★★★</span><blockquote>Sample review. Keep featured reviews short and about one thing, like how the scalp feels by evening.</blockquote><figcaption>Sample reviewer · Sample</figcaption></figure>
-          <figure class="review"><span class="stars" aria-hidden="true">★★★★★</span><blockquote>Sample review. A line about the cool tingle after a surf or a run.</blockquote><figcaption>Sample reviewer · Sample</figcaption></figure>
-          <figure class="review"><span class="stars" aria-hidden="true">★★★★☆</span><blockquote>Sample review. An honest note, like wishing the bottle came in a travel size.</blockquote><figcaption>Sample reviewer · Sample</figcaption></figure>
+          <figure class="review reveal"><span class="stars" aria-hidden="true">★★★★★</span><blockquote>Sample review. Keep featured reviews short and about one thing, like how the scalp feels by evening.</blockquote><figcaption>Sample reviewer · Tonic shampoo</figcaption></figure>
+          <figure class="review reveal"><span class="stars" aria-hidden="true">★★★★★</span><blockquote>Sample review. A line about the cool tingle of the body soap after a surf or a run.</blockquote><figcaption>Sample reviewer · Body soap</figcaption></figure>
+          <figure class="review reveal"><span class="stars" aria-hidden="true">★★★★☆</span><blockquote>Sample review. An honest note, like wishing it came in a travel size.</blockquote><figcaption>Sample reviewer · The pair</figcaption></figure>
         </div>
       </div>
     </section>
 
+    <!-- FAQ -->
     <section class="block faq" id="faq" aria-labelledby="faqH">
       <div class="wrap faq-grid">
-        <div class="block-head"><span class="eyebrow">FAQ</span><h2 id="faqH">Good to know</h2></div>
-        <div class="faq-list">
+        <div class="block-head reveal"><span class="eyebrow">FAQ</span><h2 id="faqH">Good to know</h2></div>
+        <div class="faq-list reveal">
           <details><summary>Do I still need conditioner?</summary><p>Most people with normal to fine hair don't. If your ends feel dry, add a light conditioner to the lengths only.</p></details>
-          <details><summary>Is it safe for coloured hair?</summary><p>It's gentle enough for occasional use on coloured hair. If you wash daily, alternate with a colour-care shampoo.</p></details>
-          <details><summary>How strong is the menthol?</summary><p>You'll feel a clear cool tingle for a few minutes after rinsing. It fades without leaving the scalp tight.</p></details>
+          <details><summary>Can I use the body soap on my face?</summary><p>It's made for the body. For the face, use a gentle facial cleanser, and keep menthol away from the eyes.</p></details>
+          <details><summary>How strong is the menthol?</summary><p>You'll feel a clear cool tingle for a few minutes after rinsing. It fades without leaving skin tight.</p></details>
           <details><summary>Shipping and returns</summary><p>Orders ship in 1 to 2 business days, free over $35. Unopened bottles can be returned within 30 days.</p></details>
-          <details><summary>What is the refill pouch?</summary><p>800 ml of the same shampoo in a soft pouch. Pour it into your empty pump bottle and recycle the pouch where accepted.</p></details>
+          <details><summary>What is the refill?</summary><p>800 ml of the same formula in a soft pouch. Pour it into your empty pump bottle.</p></details>
         </div>
       </div>
     </section>
 
-    <section class="news">
+    <section class="news" style="--bg:url('/img/sea-wide.webp')">
       <div class="wrap news-grid">
         <h2>Summer notes, once a month</h2>
         <form id="newsForm" class="news-form" novalidate>
           <label class="sr" for="email">Email address</label>
           <input id="email" type="email" placeholder="you@example.com" autocomplete="email" required>
-          <button class="btn btn-light" type="submit">Sign up</button>
+          <button class="btn" type="submit">Sign up</button>
           <p class="news-msg" id="newsMsg" role="status"></p>
         </form>
       </div>
@@ -184,27 +219,20 @@
 
   <footer class="site">
     <div class="wrap foot-grid">
-      <div><span class="logo">Norde</span><p>Prototype storefront. Brand, prices and reviews are placeholders.</p></div>
-      <div><h3>Shop</h3><a href="#shop">Tonic Shampoo</a><a href="#shop">Refill pouch</a></div>
+      <div><span class="logo">Norde</span><p>Prototype storefront. Prices and reviews are placeholders.</p></div>
+      <div><h3>Shop</h3><a href="#shop">Tonic Rinse in Shampoo</a><a href="#shop">Cool Body Soap</a><a href="#shop">The coast pair</a></div>
       <div><h3>Help</h3><a href="#faq">Shipping</a><a href="#faq">Returns</a><a href="#faq">FAQ</a></div>
       <div><h3>Follow</h3><a href="#" aria-disabled="true">Instagram</a><a href="#" aria-disabled="true">TikTok</a></div>
     </div>
     <div class="wrap foot-base"><span>© 2026 Norde (placeholder)</span><span>Made by the sea</span></div>
   </footer>
 
-  <!-- sticky mobile buy bar -->
-  <div class="buybar" id="buybar" aria-hidden="true">
-    <span><b>Tonic Shampoo</b> <span id="barPrice">$18.00</span></span>
-    <button class="btn" id="barAdd" tabindex="-1">Add to bag</button>
-  </div>
-
-  <!-- cart drawer -->
   <div class="scrim" id="scrim" hidden></div>
   <aside class="drawer" id="drawer" aria-label="Your bag" aria-hidden="true" tabindex="-1">
     <div class="drawer-head"><h2>Your bag</h2><button class="icon-btn" id="closeBag" aria-label="Close bag">✕</button></div>
     <div class="ship-meter"><p id="shipMsg">Add $35.00 for free delivery</p><div class="meter"><i id="shipBar"></i></div></div>
     <ul class="lines" id="lines"></ul>
-    <div class="empty" id="empty"><p>Your bag is empty.</p><a class="btn" href="#shop" id="emptyShop">Shop the shampoo</a></div>
+    <div class="empty" id="empty"><p>Your bag is empty.</p><a class="btn" href="#shop" id="emptyShop">Shop now</a></div>
     <div class="drawer-foot" id="foot">
       <div class="row"><span>Subtotal</span><b id="subtotal">$0.00</b></div>
       <div class="row muted"><span>Delivery</span><span id="delivery">Calculated at checkout</span></div>

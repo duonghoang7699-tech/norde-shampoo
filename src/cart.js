@@ -1,10 +1,13 @@
 // Bag: sizes, quantity, drawer, free-delivery meter. Saved in this browser only.
 const PRODUCTS = {
-  bottle: { name: 'Tonic Rinse-in Shampoo', variant: '550 ml pump bottle', price: 18, thumb: '/shots/thumb.webp' },
-  refill: { name: 'Tonic Rinse-in Shampoo', variant: '800 ml refill pouch', price: 15, thumb: '/shots/thumb.webp' },
+  'tonic-550': { name: 'Tonic Rinse in Shampoo', variant: '550 ml bottle', price: 18, thumb: '/img/thumb-tonic.webp' },
+  'tonic-refill': { name: 'Tonic Rinse in Shampoo', variant: '800 ml refill', price: 15, thumb: '/img/thumb-tonic.webp' },
+  'soap-550': { name: 'Cool Body Soap', variant: '550 ml bottle', price: 16, thumb: '/img/thumb-soap.webp' },
+  'soap-refill': { name: 'Cool Body Soap', variant: '800 ml refill', price: 14, thumb: '/img/thumb-soap.webp' },
+  'pair': { name: 'The coast pair', variant: 'Shampoo + body soap, 550 ml', price: 30, thumb: '/img/thumb-tonic.webp' },
 };
 const FREE_OVER = 35;
-const KEY = 'norde-bag-v1';
+const KEY = 'norde-bag-v2';
 const $ = (id) => document.getElementById(id);
 const money = (n) => `$${n.toFixed(2)}`;
 
@@ -15,20 +18,16 @@ function save(bag) { try { localStorage.setItem(KEY, JSON.stringify(bag)); } cat
 
 export function initCart() {
   let bag = load();
-  let qty = 1;
   let lastFocus = null;
   const drawer = $('drawer'), scrim = $('scrim'), bagBtn = $('bagBtn');
 
-  const selected = () => document.querySelector('input[name="size"]:checked').value;
-
-  function syncPrice() {
-    const p = PRODUCTS[selected()].price;
-    $('price').textContent = money(p);
-    $('barPrice').textContent = money(p);
-  }
-  document.querySelectorAll('input[name="size"]').forEach((r) => r.addEventListener('change', syncPrice));
-  $('qMinus').onclick = () => { qty = Math.max(1, qty - 1); $('qVal').textContent = qty; };
-  $('qPlus').onclick = () => { qty = Math.min(9, qty + 1); $('qVal').textContent = qty; };
+  document.querySelectorAll('.product').forEach((card) => {
+    const priceEl = card.querySelector('[data-price]');
+    const sel = () => card.querySelector('input[type=radio]:checked').value;
+    card.querySelectorAll('input[type=radio]').forEach((r) => r.addEventListener('change', () => { priceEl.textContent = money(PRODUCTS[sel()].price); }));
+    card.querySelector('.add').addEventListener('click', () => add(sel(), 1));
+  });
+  $('addPair').addEventListener('click', () => add('pair', 1));
 
   function add(id, n) {
     bag[id] = Math.min(20, (bag[id] || 0) + n);
@@ -36,8 +35,6 @@ export function initCart() {
     const c = $('bagCount'); c.classList.remove('bump'); void c.offsetWidth; c.classList.add('bump');
     open();
   }
-  $('addBtn').onclick = () => add(selected(), qty);
-  $('barAdd').onclick = () => add(selected(), 1);
 
   function render() {
     const ids = Object.keys(bag).filter((k) => PRODUCTS[k] && bag[k] > 0);
@@ -118,6 +115,5 @@ export function initCart() {
     toastT = setTimeout(() => t.classList.remove('show'), 2800);
   };
 
-  syncPrice();
   render();
 }
